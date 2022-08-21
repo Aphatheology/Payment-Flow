@@ -1,0 +1,50 @@
+.checkout {
+    box-shadow: 0px 10px 15px rgba(33, 30, 67, 0.08);
+    border-radius: 10px;
+    background-color: #fff;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.checkout p:not(:last-of-type) {
+    padding: 1.5rem 5rem;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4e598c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout p:first-of-type {
+    background: #2f80ed;
+    border-radius: 16px 10px 0px 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+.checkout p:last-of-type {
+    border: 1px solid #817e9e;
+    border-radius: 5px;
+    margin: 1rem 2.5rem;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0.5rem 2.5rem;
+    color: #817e9e;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+    .checkout p:not(:last-of-type) {
+        padding: 1rem;
+    }
+
+    .checkout p:last-of-type {
+        padding: 0.5rem;
+        margin: 1rem 0.5rem;
+    }
+}

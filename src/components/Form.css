@@ -1,0 +1,113 @@
+label {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 0.3rem;
+}
+
+label.required {
+    position: relative;
+}
+
+label.required::after {
+    content: '*';
+    color: red;
+    margin-left: 5px;
+}
+
+label + span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #817e9e;
+}
+
+label,
+input {
+    display: block;
+    text-transform: capitalize;
+}
+
+input,
+select {
+    margin-top: 1rem;
+    border: 1px solid #4e598c;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4f4f4f;
+    width: 100%;
+    min-height: 4rem;
+}
+
+option {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+
+form > div {
+    margin-bottom: 2.5rem;
+    width: 100%;
+}
+
+form .multipleinput {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+form .multipleinput .edate {
+    width: 25%;
+}
+
+form .multipleinput .cvv {
+    width: 15%;
+}
+
+form .multipleinput div.lga {
+    width: 65%;
+}
+
+button {
+    background: linear-gradient(180deg, #f2c94c 0%, #f2994a 100%);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #f7f7ff;
+    padding: 1rem 4rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+@media (max-width: 750px) {
+    form .multipleinput {
+        flex-wrap: wrap;
+    }
+
+    form .multipleinput .edate {
+        width: 35%;
+    }
+
+    form .multipleinput .cvv {
+        width: 35%;
+    }
+
+    form .multipleinput div:first-child {
+        width: 100%;
+    }
+
+    form .multipleinput div.lga {
+        width: 100%;
+    }
+}

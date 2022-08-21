@@ -1,0 +1,34 @@
+.payment-flow h2 {
+    font-weight: 700;
+font-size: 36px;
+line-height: 50px;
+color: #4E598C;
+margin-bottom: 60px;
+}
+
+.payment-flow .stepname  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 15px; */
+    padding-bottom: 25px;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+.payment-flow .stepname .current-step {
+    position: relative;
+    /* border: 1px solid red;
+    width: 100%;
+    text-align: center; */
+}
+
+.payment-flow .stepname .current-step::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    border-bottom: 10px solid #F2994A;
+    border-radius: 10px;
+}
