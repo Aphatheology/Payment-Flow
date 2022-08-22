@@ -16,6 +16,10 @@ margin-bottom: 60px;
     margin-bottom: 1rem;
 }
 
+.payment-flow .stepname span:not(:last-of-type) {
+    padding-right: 2rem;
+}
+
 .payment-flow .stepname .current-step {
     position: relative;
     /* border: 1px solid red;

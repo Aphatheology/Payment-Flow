@@ -1,13 +1,13 @@
 import React from 'react'
 
-function PersonalInfo({nextStep, handleChange, values}) {
+function PersonalInfo({nextStep, handleChange, cancel, values}) {
 
     const next = e => {
         e.preventDefault();
         nextStep()
     }
   return (
-    <form onSubmit={next}>
+    <form className='animate' onSubmit={next}>
         <div>
             <label className='required' htmlFor="name">Name</label>
             <input type="text" id="name" placeholder="Enter your name" value={values.fullName} onChange={handleChange('fullName')} required />
@@ -37,7 +37,9 @@ function PersonalInfo({nextStep, handleChange, values}) {
             </div>
         </div>
 
-        <button type='submit'>Next</button>
+        <button className="cta" type='submit'>Next</button>
+        <button className="text" onClick={cancel}>Cancel Payment</button>
+        
         
     </form>
   )

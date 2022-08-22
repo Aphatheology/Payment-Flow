@@ -1,7 +1,7 @@
 
 import './ConfirmPayment.css'
 
-function ConfirmPayment({ nextStep, prevStep, openModal }) {
+function ConfirmPayment({ nextStep, prevStep, cancel, openModal }) {
     const previous = e => {
         e.preventDefault();
         prevStep()
@@ -14,7 +14,7 @@ function ConfirmPayment({ nextStep, prevStep, openModal }) {
     }
   return (
     <div>
-        <div className='checkout'>
+        <div className='checkout animate'>
             <p>
                 Item Name
                 <span>#Price</span>
@@ -34,8 +34,9 @@ function ConfirmPayment({ nextStep, prevStep, openModal }) {
             
         </div>
 
-        <button onClick={previous}>Previous</button>
-        <button onClick={pay}>Pay</button>
+        <button className="cta" onClick={previous}>Previous</button>
+        <button className="cta" onClick={pay}>Pay</button>
+        <button className="text" onClick={cancel}>Cancel Payment</button>
     </div>
   )
 }

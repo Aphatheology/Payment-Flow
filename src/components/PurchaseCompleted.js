@@ -8,7 +8,7 @@ const PurchaseCompleted = ({ closeModal }) => {
     };
     
     return (
-        <div className="completed">
+        <div className="completed animate">
             <div>
                 <img src={CompletedTick} alt="Completed Tick" />
             </div>
@@ -19,7 +19,8 @@ const PurchaseCompleted = ({ closeModal }) => {
                 Please check your email for detail concerning this transaction
             </p>
 
-            <a href='#' onClick={close}>Return Home</a>
+            {/* <a href='#' onClick={close}>Return Home</a> */}
+            <button className="return" onClick={close}>Return Home</button>
         </div>
     );
 };

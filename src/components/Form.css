@@ -1,3 +1,5 @@
+
+
 label {
     font-weight: 700;
     font-size: 20px;
@@ -11,7 +13,7 @@ label.required {
 }
 
 label.required::after {
-    content: '*';
+    content: "*";
     color: red;
     margin-left: 5px;
 }
@@ -73,7 +75,7 @@ form .multipleinput div.lga {
     width: 65%;
 }
 
-button {
+button.cta {
     background: linear-gradient(180deg, #f2c94c 0%, #f2994a 100%);
     border-radius: 10px;
     font-weight: 700;
@@ -86,8 +88,43 @@ button {
     margin-top: 1rem;
 }
 
-button:not(:last-of-type) {
+button.cta:not(:last-of-type) {
     margin-right: 15px;
+}
+
+button.text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4e598c;
+    margin: 1rem 1rem 0px;
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
 }
 
 @media (max-width: 750px) {

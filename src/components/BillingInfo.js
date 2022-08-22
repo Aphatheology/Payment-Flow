@@ -1,6 +1,6 @@
-import React from 'react'
+import CreditCardInputMask from "credit-card-input-mask";
 
-function BillingInfo({nextStep, prevStep, handleChange, values}) {
+function BillingInfo({nextStep, prevStep, cancel, handleChange, values}) {
     const next = e => {
         e.preventDefault();
         nextStep()
@@ -11,7 +11,7 @@ function BillingInfo({nextStep, prevStep, handleChange, values}) {
         prevStep()
     }
   return (
-    <form onSubmit={next}>
+    <form className='animate' onSubmit={next}>
         <div>
             <label className='required' htmlFor="nameoncard">Nameoncard</label>
             <input type="text" id="nameoncard" placeholder="John Doe" value={values.nameOnCard} onChange={handleChange('nameOnCard')} required />
@@ -43,8 +43,9 @@ function BillingInfo({nextStep, prevStep, handleChange, values}) {
             </div>
         </div>
 
-        <button onClick={previous}>Previous</button>
-        <button type='submit'>Next</button>
+        <button className="cta" onClick={previous}>Previous</button>
+        <button className="cta" type='submit'>Next</button>
+        <button className="text" onClick={cancel}>Cancel Payment</button>
     </form>
   )
 }

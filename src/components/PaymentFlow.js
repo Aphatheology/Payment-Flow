@@ -48,6 +48,23 @@ function PaymentFlow() {
         })
     }
 
+    const cancel = () => {
+        setPaymentInfo(() => ({
+            step: 1,
+            fullName: '',
+            email: '',
+            address1: '',
+            address2: '',
+            lga: '',
+            state: '',
+            nameOnCard: '',
+            cardType: '',
+            cardDetails: '',
+            expirtyDate: '',
+            cvv: ''
+        }))
+    }
+
     const handleChange = input => e => {
         setPaymentInfo(prevInfo => ({
             ...prevInfo,
@@ -66,7 +83,8 @@ function manageStep() {
         case 1: 
           return (
             <PersonalInfo 
-                nextStep={nextStep}   
+                nextStep={nextStep}
+                cancel={cancel}   
                 handleChange={handleChange}  
                 values={values}     
             />
@@ -75,7 +93,8 @@ function manageStep() {
           return (
             <BillingInfo 
                 nextStep={nextStep}   
-                prevStep={prevStep}   
+                prevStep={prevStep}
+                cancel={cancel}   
                 handleChange={handleChange}  
                 values={values}   
             />
@@ -85,6 +104,7 @@ function manageStep() {
             <ConfirmPayment 
                 nextStep={nextStep} 
                 prevStep={prevStep}
+                cancel={cancel}
                 openModal={openModal}
             />
           )
